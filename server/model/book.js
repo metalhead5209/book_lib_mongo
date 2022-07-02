@@ -19,8 +19,9 @@ const bookSchema = new Schema({
     },
 
     isRead: {
-        type: Boolean,
-        required: true
+        type: String,
+        enum: ['Finished', 'Not Finished'],
+        default: 'Finished'
     }
 })
 

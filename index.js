@@ -34,11 +34,18 @@ app.use(methodOverride('_method'));
 app.use(bodyParser.json());
 
 
-// ROUTES
+//            *** ROUTES ***
+
+// Book Library (index)
 app.get('/', async (req, res) => {
     const book = await Book.find({}).lean()
     res.render('index', { book });
-})
+});
+
+// New Book Form
+
+
+
 
 
 
