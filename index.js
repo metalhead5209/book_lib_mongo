@@ -59,9 +59,8 @@ app.delete("/:id", async (req, res) => {
     res.redirect('/');
 });
 
-app.get('/edit/:id', async (req, res) => {
-  const { id } = parseInt(req.params);
-  const book = await Book.findById(id)
+app.get('/edit/:id', async (req, res) => {;
+  const book = await Book.findById(req.params.id)
   res.render('edit', { book })
 })
 
