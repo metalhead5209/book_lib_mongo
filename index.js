@@ -45,12 +45,24 @@ app.get("/new", (req, res) => {
   res.render("new");
 });
 
+// Add Book Route
 app.post("/", async (req, res) => {
     const book = new Book(req.body);
     await book.save();
     res.redirect('/');
 });
 
+// Delete Book Route
+app.delete("/:title", async (req, res) => {
+    const { title } = req.params;
+    await Book.findOneAndDelete(title);
+    res.redirect('/');
+})
+
+
+
+
+// PORT
 app.listen(PORT, () => {
   console.log(`On port ${PORT}`);
 });

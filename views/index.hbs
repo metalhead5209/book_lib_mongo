@@ -25,7 +25,12 @@
                 <div class="edit-delete">
                     
                     <button class="lib-btn">Edit</button>
-                    <button class="lib-btn">Delete</button>
+
+                   <form action="/{{title}}?_method=DELETE"  method="POST">
+                        <button class="lib-btn">Delete</button>
+                   </form> 
+                    
+                    
                 </div>
 
      </div>
