@@ -43,6 +43,10 @@ app.get('/', async (req, res) => {
 });
 
 // New Book Form
+app.get('/new', (req, res) => {
+    res.render('new');
+})
+
 
 
 

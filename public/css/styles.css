@@ -3,9 +3,6 @@
     --mainBGcolor: #14213d;
 }
 
-/* #hidden {
-    display: none;
-} */
 
 *,
 *::before,
@@ -36,10 +33,6 @@ body {
     font-weight: 800;
 }
 
-#secondary-heading {
-    color: var(--main-text);
-    font-family: 'Bayon', sans-serif;   
-}
 
 
 #open-addBook-modal {
@@ -75,7 +68,6 @@ body {
     left: 0;
     overflow: auto;
     z-index: 10;
-    display: none;
 }
 
 .modal {
@@ -295,8 +287,6 @@ body {
     .book-library {
         grid-template-columns: 1fr;
         justify-content: center;
-        
-       
     }
 
     .card-title {
@@ -306,8 +296,26 @@ body {
     .book-card {
         width: 20em;
     }
+
+   
+
+    .modal-content {
+        justify-content: center;
+        height: 80%;
+        
+    }
         
 
+}
+
+@media screen and (max-width: 320px) {
+    .modal{
+        width: 80%
+    }
+
+    input {
+        width: 80%;
+    }
 }
 
 body::-webkit-scrollbar {
