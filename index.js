@@ -57,6 +57,12 @@ app.delete("/:title", async (req, res) => {
     const { title } = req.params;
     await Book.findOneAndDelete(title);
     res.redirect('/');
+});
+
+app.get('/edit/:title', async (req, res) => {
+  const { title } = req.params;
+  const book = await Book.findOneAndUpdate(title)
+  res.render('edit', { book })
 })
 
 
