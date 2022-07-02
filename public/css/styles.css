@@ -56,6 +56,25 @@ body {
 
 }
 
+#add-Book {
+    border-radius: 5px 8px;
+    padding: .5em;
+    width: 8em;
+    font-family: 'Chango', cursive;
+    font-weight: 900;
+    font-size: 1.3em;
+    color: var(--mainBGcolor);
+    margin-bottom: 2em;
+}
+
+#add-Book:hover {
+    background-color: var(--mainBGcolor);
+    color: var(--main-text);
+    transition: ease .2s;
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 5px 15px;
+    cursor: pointer;
+}
+
 
 /* POP UP MODAL */
 
@@ -112,12 +131,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 50%;
 }
 
 .book-input {
     display: grid;
     grid-template-columns: 1fr;
+    margin: 1.2em;
     
 }
 
@@ -131,11 +150,8 @@ body {
     color: var(--main-text);
 }
 
-#addIcon-btn {
-    width: 8em;
-    margin: 1em;
-    /* max-width: 90%; */
-}
+
+
 
 
 
@@ -250,6 +266,8 @@ body {
 
 
 
+
+
 @media screen and (max-width: 820px) {
     .lib-table {
         width: 50%;
@@ -297,6 +315,10 @@ body {
         width: 20em;
     }
 
+    .modal {
+        max-height: 600px;
+    }
+
    
 
     .modal-content {
@@ -310,7 +332,8 @@ body {
 
 @media screen and (max-width: 320px) {
     .modal{
-        width: 80%
+        width: 80%;
+        max-height: 400px;
     }
 
     input {

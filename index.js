@@ -27,7 +27,7 @@ app.engine("hbs", handlebars.engine({ extname: ".hbs" }));
 app.set("view engine", "hbs");
 
 // MIDDLEWARE
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static("public"));
 app.use(methodOverride('_method'));
@@ -45,6 +45,10 @@ app.get('/', async (req, res) => {
 // New Book Form
 app.get('/new', (req, res) => {
     res.render('new');
+})
+
+app.post('/', async (req, res) => {
+
 })
 
 

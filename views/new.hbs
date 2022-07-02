@@ -1,4 +1,47 @@
- <!-- Modal Container -->
+<div class="modal-container" id="main-modal-container">
+    <div class="modal">
+        <div class="modal-content">
+            <a href="/"><span id="close-modal-btn">&#88</span></a>
+            <div class="form">
+                <form action="/" method="POST" enctype="multipart/form-data" novalidate>
+                <button id="add-Book">Add Book</button>
+                <!-- Title Input -->
+                <div class="book-input" id="title-input">
+                    <label for="title-input" class="input-label">Title</label>
+                    <input type="text" name="title" class="form-input title" id="title-input" required>
+                </div>
+
+                <!-- Authur Input -->
+                <div class="book-input" id="authur-input">
+                    <label for="authur-input" class="input-label">Author</label>
+                    <input type="text" name="authur" class="form-input authur" id="authur-input"
+                        required>
+                </div>
+
+                <!-- Page Number Input -->
+                <div class="page-input" id="page-input">
+                    <label for="page-number-input" class="input-label">Number of Pages</label>
+                    <input type="number" name="pages" class="form-input page"
+                        id="page-number-input" required>
+                </div>
+
+                <!-- Checkbox for Read or Not -->
+                <div class="book-input-radio" id="checkbox-input">
+                    <p class="input-label">Have you read the book?</p>
+
+                    <select class="select" required>
+                        <option value="Finished">Yes</option>
+                        <option value="Not Finished">No</option>
+                    </select>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+ {{!-- <!-- Modal Container -->
             <div class="modal-container" id="main-modal-container">
 
                 <!-- Modal -->
@@ -8,21 +51,16 @@
                     <div class="modal-content">
                         <a href="/"><span id="close-modal-btn">&#88</span></a>
 
+                    <form action="/" method="POST" enctype="multipart/form-data" novalidate>
                         <!-- Modal Content header Container -->
                         <div class="modal-content-header">
-
-                            <!-- Add Book Icon -->
-                            <img src="/imgs/addBook.svg" alt="addIcon" id="addIcon-btn">
-
                             <!-- Add Book -->
                             <h3 id="modal-title">Add Book</h3>
 
                         </div>
                         <!-- Modal Content Form Container -->
                         <div class="form">
-
-                            <!-- Form -->
-                            <form>
+                            
                                 <!-- Title Input -->
                                 <div class="book-input" id="title-input">
                                     <label for="title-input" class="input-label">Title</label>
@@ -39,7 +77,7 @@
                                 <!-- Page Number Input -->
                                 <div class="page-input" id="page-input">
                                     <label for="page-number-input" class="input-label">Number of Pages</label>
-                                    <input type="number" name="page-number" class="form-input page"
+                                    <input type="number" name="pages" class="form-input page"
                                         id="page-number-input" required>
                                 </div>
 
@@ -48,16 +86,17 @@
                                     <p class="input-label">Have you read the book?</p>
 
                                     <select class="select" required>
-                                        <option value="yes">Yes</option>
-                                        <option value="no">No</option>
+                                        <option value="Finished">Yes</option>
+                                        <option value="Not Finished">No</option>
                                     </select>
-
                                 </div>
-                            </form>
+
+                                    
+                     </form>
                         </div>
                     </div>
                 </div>
 
             </div>
 
-            </div>
+            </div> --}}
