@@ -35,8 +35,9 @@ app.use(bodyParser.json());
 
 
 // ROUTES
-app.get('/', (req, res) => {
-    res.render('index');
+app.get('/', async (req, res) => {
+    const book = await Book.find({}).lean()
+    res.render('index', { book });
 })
 
 

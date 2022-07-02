@@ -1,23 +1,25 @@
+ {{#each book}}
+ 
  <div class="book-card">
 
                 <div class="card-title">
                     <h2 class="bookCardTitle">Title:</h2>
-                    <h2 class="card-data">I love Phoebee</h>
+                    <h2 class="card-data">{{title}}</h2>
                 </div>
                 
                 <div class="card-title">
                     <h2 class="bookCardAuthur">Authur:</h2>
-                    <h2 class="card-data">Aaron Rodi</h2>
+                    <h2 class="card-data">{{authur}}</h2>
                 </div>
 
                 <div class="card-title">
                     <h2 class="bookCardPages">Pages:</h2>
-                    <h2 class="card-data">666</h2>
+                    <h2 class="card-data">{{pages}}</h2>
                 </div>
 
                 <div class="card-title">
                     <h2 class="bookIsRead">Finished Reading?</h2>
-                    <h2 class="card-data">Yes</h2>
+                    <h2 class="card-data">{{isRead}}</h2>
                 </div>
 
                 <div class="edit-delete">
@@ -27,3 +29,5 @@
                 </div>
 
      </div>
+
+     {{/each}}
