@@ -4,52 +4,7 @@
       <a href="/"><span id="close-modal-btn">&#88</span></a>
       <div class="form">
         <form action="/" method="POST">
-          <button id="add-Book">Add Book</button>
-          <!-- Title Input -->
-          <div class="book-input" id="title-input">
-            <label for="title-input" class="input-label">Title</label>
-            <input
-              type="text"
-              name="title"
-              
-              class="form-input title"
-              id="title-input"
-            />
-          </div>
-
-          <!-- Authur Input -->
-          <div class="book-input" id="authur-input">
-            <label for="authur-input" class="input-label">Author</label>
-            <input
-              type="text"
-              name="authur"
-              {
-              class="form-input authur"
-              id="authur-input"
-            />
-          </div>
-
-          <!-- Page Number Input -->
-          <div class="page-input" id="page-input">
-            <label for="page-number-input" class="input-label">Number of Pages</label>
-            <input
-              type="number"
-              name="pages"
-              
-              class="form-input page"
-              id="page-number-input"
-            />
-          </div>
-
-          <!-- Checkbox for Read or Not -->
-          <div class="book-input-radio" id="checkbox-input">
-            <p class="input-label">Have you read the book?</p>
-
-            <select class="select" name="isRead" required>
-              <option value="Finished">Yes</option>
-              <option value="Not Finished">No</option>
-            </select>
-          </div>
+        {{> form}}
         </form>
       </div>
     </div>

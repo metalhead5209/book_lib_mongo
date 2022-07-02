@@ -53,17 +53,21 @@ app.post("/", async (req, res) => {
 });
 
 // Delete Book Route
-app.delete("/:title", async (req, res) => {
-    const { title } = req.params;
-    await Book.findOneAndDelete(title);
+app.delete("/:id", async (req, res) => {
+    const { id } = req.params;
+    await Book.findByIdAndDelete(id);
     res.redirect('/');
 });
 
-app.get('/edit/:title', async (req, res) => {
-  const { title } = req.params;
-  const book = await Book.findOneAndUpdate(title)
+app.get('/edit/:id', async (req, res) => {
+  const { id } = parseInt(req.params);
+  const book = await Book.findById(id)
   res.render('edit', { book })
 })
+
+// app.post("/edit/:id", async (req, res) => {
+
+// })
 
 
 
