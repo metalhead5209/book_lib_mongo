@@ -188,18 +188,6 @@ body {
     right: 25%;
   }
 
-@media screen and (max-width: 520px) {
-    .modal {
-        width: 80%;
-        margin: auto;
-    }
-
-    #addIcon-btn {
-        width: 5em;
-    }
-
-}
-
 
 /* BOOK LIBRARY */
 
@@ -283,20 +271,43 @@ body {
     }
 
     .book-card {
-        width: 15em;
+        width: 20em;
     }
 
     
 }
 
 
+@media screen and (max-width: 520px) {
+    .modal {
+        width: 80%;
+        margin: auto;
+    }
+
+    #addIcon-btn {
+        width: 5em;
+    }
+
+}
+
 
 @media screen and (max-width: 450px) {
     .book-library {
         grid-template-columns: 1fr;
         justify-content: center;
+        
        
     }
+
+    .card-title {
+        font-size: .7em;
+    }
+
+    .book-card {
+        width: 20em;
+    }
+        
+
 }
 
 body::-webkit-scrollbar {
