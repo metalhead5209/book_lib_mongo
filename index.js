@@ -40,7 +40,7 @@ app.get("/", async (req, res) => {
   res.render("index", { book });
 });
 
-// New Book Form
+// New Book Modal
 app.get("/new", (req, res) => {
   res.render("new");
 });
@@ -52,22 +52,29 @@ app.post("/", async (req, res) => {
     res.redirect('/');
 });
 
+
+// Edit Book Modal
+app.get('/edit/:id', async (req, res) => {;
+  const book = await Book.findById(req.params.id)
+  res.render('edit', { book })
+})
+
+
+// Edit Book Route
+app.put("/edit/:id", async (req, res) => {
+  const { id } = req.params
+  const book = await Book.findByIdAndUpdate(id, req.body, { runValidators: true, new: true });
+  await book.save();
+  res.redirect('/'); 
+})
+
+
 // Delete Book Route
 app.delete("/:id", async (req, res) => {
     const { id } = req.params;
     await Book.findByIdAndDelete(id);
     res.redirect('/');
 });
-
-app.get('/edit/:id', async (req, res) => {;
-  const book = await Book.findById(req.params.id)
-  res.render('edit', { book })
-})
-
-// app.post("/edit/:id", async (req, res) => {
-
-// })
-
 
 
 
