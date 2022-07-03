@@ -4,7 +4,8 @@
   "description": "A digital library for your books",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "start:dev": "nodemon index.js"
   },
   "author": "Aaron Rodi",
   "license": "ISC",
