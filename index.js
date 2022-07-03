@@ -4,7 +4,7 @@ if (process.env.NODE_ENV !== "production") {
 
 const express = require("express");
 const path = require("path");
-const mongoose = require("mongoose");
+const mongoose = require('mongoose')
 const handlebars = require("express-handlebars");
 const methodOverride = require("method-override");
 const dotenv = require("dotenv").config();
