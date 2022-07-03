@@ -1,20 +1,22 @@
-if (process.env.NODE_ENV !== "production") {
-  require('dotenv').config();
-}
+// if (process.env.NODE_ENV !== "production") {
+//   require('dotenv').config();
+// }
 
 const express = require("express");
 const path = require("path");
 const mongoose = require('mongoose')
 const handlebars = require("express-handlebars");
 const methodOverride = require("method-override");
-const dotenv = require("dotenv").config();
+const dotenv = require("dotenv")
 const bodyParser = require("body-parser");
 const Book = require("./server/model/book");
 
-const app = express();
-const PORT = process.env.PORT;
+dotenv.config();
 
-const dbURL = process.env.DB_URL;
+const app = express();
+const PORT = process.env.PORT || 5050;
+
+const dbURL = process.env.DB_URL || 'mongodb://127.0.0.1:27017/bookLibrary';
 
 // DB CONNECTION
 mongoose.connect(
