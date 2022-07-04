@@ -4,15 +4,13 @@ const path = require("path");
 const mongoose = require('mongoose')
 const handlebars = require("express-handlebars");
 const methodOverride = require("method-override");
-const dotenv = require("dotenv")
+const dotenv = require("dotenv").config()
 const bodyParser = require("body-parser");
 const Book = require("./server/model/book");
 
-dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5050;
-
 const dbURL = process.env.DB_URL;
 
 
@@ -41,6 +39,7 @@ app.use(bodyParser.json());
 app.get("/", async (req, res) => {
   const book = await Book.find({}).lean();
   res.render("index", { book });
+  console.log(typeof process.env.DB_URL)
 });
 
 // New Book Modal
