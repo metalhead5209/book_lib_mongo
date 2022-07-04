@@ -39,7 +39,6 @@ app.use(bodyParser.json());
 app.get("/", async (req, res) => {
   const book = await Book.find({}).lean();
   res.render("index", { book });
-  console.log(typeof process.env.DB_URL)
 });
 
 // New Book Modal
