@@ -1,6 +1,3 @@
-// if (process.env.NODE_ENV !== "production") {
-//   require('dotenv').config();
-// }
 
 const express = require("express");
 const path = require("path");
@@ -16,7 +13,8 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5050;
 
-const dbURL = process.env.DB_URL || 'mongodb://127.0.0.1:27017/bookLibrary';
+const dbURL = process.env.DB_URL;
+// const dbURL = 'mongodb://127.0.0.1:27017/bookLibrary';
 
 // DB CONNECTION
 mongoose.connect(
