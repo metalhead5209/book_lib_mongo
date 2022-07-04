@@ -14,9 +14,7 @@ const app = express();
 const PORT = process.env.PORT || 5050;
 
 const dbURL = process.env.DB_URL;
-// const dbURL = 'mongodb://127.0.0.1:27017/bookLibrary';
 
-// DB CONNECTION
 mongoose.connect(
   dbURL,
   () => {
